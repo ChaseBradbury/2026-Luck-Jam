@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://d10p1s7xxu6qf"]
+
+[ext_resource type="PackedScene" uid="uid://8yj2j4cstdhp" path="res://scenes/creature.tscn" id="1_04knn"]
+[ext_resource type="Script" path="res://scripts/controllers/game_controller.gd" id="1_x66g7"]
+[ext_resource type="Resource" uid="uid://c4b4ravrdk5p0" path="res://resources/creatures/default_creature2.tres" id="3_xyhiv"]
+[ext_resource type="Resource" uid="uid://y62ycwag74kj" path="res://resources/creatures/default_creature3.tres" id="4_033fj"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_x66g7")
+
+[node name="ParentCreature" parent="." instance=ExtResource("1_04knn")]
+position = Vector2(188, 333)
+scale = Vector2(0.185, 0.185)
+
+[node name="Randomize" type="Button" parent="."]
+offset_left = 153.0
+offset_top = 486.0
+offset_right = 244.0
+offset_bottom = 517.0
+text = "Randomize"
+
+[node name="ParentCreature2" parent="." instance=ExtResource("1_04knn")]
+position = Vector2(479, 335)
+scale = Vector2(0.185, 0.185)
+creature = ExtResource("3_xyhiv")
+
+[node name="Randomize2" type="Button" parent="."]
+offset_left = 433.0
+offset_top = 493.0
+offset_right = 528.0
+offset_bottom = 524.0
+text = "Randomize"
+
+[node name="Breed" type="Button" parent="."]
+offset_left = 684.0
+offset_top = 285.0
+offset_right = 738.0
+offset_bottom = 316.0
+text = "Breed"
+
+[node name="ChildCreature" parent="." instance=ExtResource("1_04knn")]
+position = Vector2(976, 339)
+scale = Vector2(0.185, 0.185)
+creature = ExtResource("4_033fj")
+
+[connection signal="pressed" from="Randomize" to="." method="_on_randomize_pressed"]
+[connection signal="pressed" from="Randomize2" to="." method="_on_randomize_2_pressed"]
+[connection signal="pressed" from="Breed" to="." method="_on_breed_pressed"]

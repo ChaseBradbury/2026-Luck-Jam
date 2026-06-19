@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Creature" load_steps=2 format=3 uid="uid://dhtw7eouw0ly6"]
+
+[ext_resource type="Script" path="res://scripts/recources/creature_resource.gd" id="1_w2eu6"]
+
+[resource]
+script = ExtResource("1_w2eu6")
+name = ""
+dna = Array[Vector2i]([Vector2i(0, 0), Vector2i(0, 0), Vector2i(0, 0), Vector2i(0, 0), Vector2i(0, 0), Vector2i(0, 0), Vector2i(0, 0)])

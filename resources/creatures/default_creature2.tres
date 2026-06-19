@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Creature" load_steps=2 format=3 uid="uid://c4b4ravrdk5p0"]
+
+[ext_resource type="Script" path="res://scripts/recources/creature_resource.gd" id="1_pskca"]
+
+[resource]
+script = ExtResource("1_pskca")
+name = ""

@@ -1,7 +1,12 @@
-[gd_resource type="Resource" script_class="FeatureList" load_steps=2 format=3 uid="uid://qk1kptuhqm2v"]
+[gd_resource type="Resource" script_class="FeatureList" load_steps=7 format=3 uid="uid://qk1kptuhqm2v"]
 
 [ext_resource type="Script" path="res://scripts/recources/feature_list_resource.gd" id="1_2ji0j"]
+[ext_resource type="Resource" uid="uid://ddx1afkhxq7w3" path="res://resources/features/ears/ears1.tres" id="1_o8xdy"]
+[ext_resource type="Resource" uid="uid://co21c1m7rxccl" path="res://resources/features/ears/ears2.tres" id="2_8u7g6"]
+[ext_resource type="Resource" uid="uid://p6bfhd3ss1iu" path="res://resources/features/ears/ears3.tres" id="3_3pt7d"]
+[ext_resource type="Resource" uid="uid://drxqvqniobdwn" path="res://resources/features/ears/ears4.tres" id="4_ol6or"]
+[ext_resource type="Resource" uid="uid://dsdyrg4iqoj44" path="res://resources/features/ears/ears5.tres" id="5_wta86"]
 
 [resource]
 script = ExtResource("1_2ji0j")
-array = Array[Resource("res://scripts/recources/feature_resource.gd")]([])
+array = Array[Resource("res://scripts/recources/feature_resource.gd")]([ExtResource("1_o8xdy"), ExtResource("2_8u7g6"), ExtResource("3_3pt7d"), ExtResource("4_ol6or"), ExtResource("5_wta86")])

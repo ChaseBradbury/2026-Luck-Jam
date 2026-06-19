@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Feature" load_steps=4 format=3 uid="uid://qstmrci086oc"]
+
+[ext_resource type="Script" path="res://scripts/recources/feature_resource.gd" id="1_eav3k"]
+[ext_resource type="Texture2D" uid="uid://mty3j0681j53" path="res://textures/features/head/head5.png" id="2_sermk"]
+[ext_resource type="Resource" uid="uid://dv5xq01a2d6bh" path="res://resources/feature types/head_type.tres" id="3_mlfm6"]
+
+[resource]
+script = ExtResource("1_eav3k")
+name = ""
+type = ExtResource("3_mlfm6")
+texture = ExtResource("2_sermk")
+offset = Vector2(0, 0)
+scale = Vector2(1, 1)

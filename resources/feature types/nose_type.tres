@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="FeatureType" load_steps=2 format=3 uid="uid://3qm8yikjxfy8"]
+
+[ext_resource type="Script" path="res://scripts/recources/feature_type_resource.gd" id="1_bcxiq"]
+
+[resource]
+script = ExtResource("1_bcxiq")
+name = "Nose"
+description = ""
+type_offset = Vector2(0, 0)
+type_scale = Vector2(0.2, 0.2)

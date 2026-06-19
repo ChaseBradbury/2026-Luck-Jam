@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Feature" load_steps=4 format=3 uid="uid://c1ldbh00165vc"]
+
+[ext_resource type="Script" path="res://scripts/recources/feature_resource.gd" id="1_uprnd"]
+[ext_resource type="Texture2D" uid="uid://tutfqxabo0cg" path="res://textures/features/mouth/mouth1.png" id="2_x504b"]
+[ext_resource type="Resource" uid="uid://dlq6uei66kvnl" path="res://resources/feature types/mouth_type.tres" id="3_6teaf"]
+
+[resource]
+script = ExtResource("1_uprnd")
+name = ""
+type = ExtResource("3_6teaf")
+texture = ExtResource("2_x504b")
+offset = Vector2(0, 0)
+scale = Vector2(1, 1)

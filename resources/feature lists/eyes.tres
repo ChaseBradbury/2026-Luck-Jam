@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="FeatureList" load_steps=7 format=3 uid="uid://coofd4yqr8f7y"]
+
+[ext_resource type="Resource" uid="uid://dm18r2a22r1f5" path="res://resources/features/eyes/eyes1.tres" id="1_62iw4"]
+[ext_resource type="Script" path="res://scripts/recources/feature_list_resource.gd" id="1_qt67m"]
+[ext_resource type="Resource" uid="uid://dkbm16a5pj4d7" path="res://resources/features/eyes/eyes2.tres" id="2_5bfxn"]
+[ext_resource type="Resource" uid="uid://c6e1gm0q6xdfo" path="res://resources/features/eyes/eyes3.tres" id="3_ph1ot"]
+[ext_resource type="Resource" uid="uid://tx8au1uattgw" path="res://resources/features/eyes/eyes4.tres" id="4_xw76d"]
+[ext_resource type="Resource" uid="uid://dcwebrudec07c" path="res://resources/features/eyes/eyes5.tres" id="5_n6iyj"]
+
+[resource]
+script = ExtResource("1_qt67m")
+array = Array[Resource("res://scripts/recources/feature_resource.gd")]([ExtResource("1_62iw4"), ExtResource("2_5bfxn"), ExtResource("3_ph1ot"), ExtResource("4_xw76d"), ExtResource("5_n6iyj")])

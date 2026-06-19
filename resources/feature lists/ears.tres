@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="FeatureList" load_steps=2 format=3 uid="uid://qk1kptuhqm2v"]
+
+[ext_resource type="Script" path="res://scripts/recources/feature_list_resource.gd" id="1_2ji0j"]
+
+[resource]
+script = ExtResource("1_2ji0j")
+array = Array[Resource("res://scripts/recources/feature_resource.gd")]([])

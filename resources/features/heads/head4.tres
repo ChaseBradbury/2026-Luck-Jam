@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Feature" load_steps=4 format=3 uid="uid://c5qjnoyywf2vl"]
+
+[ext_resource type="Script" path="res://scripts/recources/feature_resource.gd" id="1_ihrpo"]
+[ext_resource type="Texture2D" uid="uid://b334q41r5mn8v" path="res://textures/features/head/head4.png" id="2_3gmbq"]
+[ext_resource type="Resource" uid="uid://dv5xq01a2d6bh" path="res://resources/feature types/head_type.tres" id="3_4w3q1"]
+
+[resource]
+script = ExtResource("1_ihrpo")
+name = ""
+type = ExtResource("3_4w3q1")
+texture = ExtResource("2_3gmbq")
+offset = Vector2(0, 0)
+scale = Vector2(1, 1)

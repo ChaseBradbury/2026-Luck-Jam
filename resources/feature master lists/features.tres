@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="FeatureMasterList" load_steps=9 format=3 uid="uid://biheeblxg3385"]
+
+[ext_resource type="Resource" uid="uid://qk1kptuhqm2v" path="res://resources/feature lists/ears.tres" id="1_84fhd"]
+[ext_resource type="Script" path="res://scripts/recources/feature_master_list_resource.gd" id="1_fupd2"]
+[ext_resource type="Resource" uid="uid://bb7purpodjls4" path="res://resources/feature lists/eyebrows.tres" id="2_lm5ds"]
+[ext_resource type="Resource" uid="uid://coofd4yqr8f7y" path="res://resources/feature lists/eyes.tres" id="3_8p2sx"]
+[ext_resource type="Resource" uid="uid://br7f4oay4rfer" path="res://resources/feature lists/hairs.tres" id="4_ymy66"]
+[ext_resource type="Resource" uid="uid://dvusxxlo1yeyl" path="res://resources/feature lists/heads.tres" id="5_jja8c"]
+[ext_resource type="Resource" uid="uid://0p77ci6tgkwu" path="res://resources/feature lists/mouths.tres" id="6_is8j6"]
+[ext_resource type="Resource" uid="uid://blxnsj5y1w31r" path="res://resources/feature lists/noses.tres" id="7_wncw4"]
+
+[resource]
+script = ExtResource("1_fupd2")
+heads = ExtResource("5_jja8c")
+ears = ExtResource("1_84fhd")
+eyes = ExtResource("3_8p2sx")
+eyebrows = ExtResource("2_lm5ds")
+mouths = ExtResource("6_is8j6")
+noses = ExtResource("7_wncw4")
+hair = ExtResource("4_ymy66")

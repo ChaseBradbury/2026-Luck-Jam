@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="FeatureType" load_steps=2 format=3 uid="uid://dlq6uei66kvnl"]
+
+[ext_resource type="Script" path="res://scripts/recources/feature_type_resource.gd" id="1_ji3vh"]
+
+[resource]
+script = ExtResource("1_ji3vh")
+name = "Mouth"
+description = ""
+type_offset = Vector2(0, 128)
+type_scale = Vector2(0.4, 0.4)

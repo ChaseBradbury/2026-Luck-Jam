@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Feature" load_steps=4 format=3 uid="uid://qq3wgols1bpe"]
+
+[ext_resource type="Script" path="res://scripts/recources/feature_resource.gd" id="1_iuba1"]
+[ext_resource type="Resource" uid="uid://dk0dfb6qk3p72" path="res://resources/feature types/hair_type.tres" id="2_l54kl"]
+[ext_resource type="Texture2D" uid="uid://bbrrh4w1vxi25" path="res://textures/features/hair/hair5.png" id="2_ti8os"]
+
+[resource]
+script = ExtResource("1_iuba1")
+name = ""
+type = ExtResource("2_l54kl")
+texture = ExtResource("2_ti8os")
+offset = Vector2(0, 0)
+scale = Vector2(1, 1)

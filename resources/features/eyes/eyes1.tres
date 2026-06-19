@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Feature" load_steps=4 format=3 uid="uid://dm18r2a22r1f5"]
+
+[ext_resource type="Script" path="res://scripts/recources/feature_resource.gd" id="1_gef8a"]
+[ext_resource type="Texture2D" uid="uid://r6n27lb6rnw8" path="res://textures/features/eyes/eyes1.png" id="2_h01c3"]
+[ext_resource type="Resource" uid="uid://b7b56gycquene" path="res://resources/feature types/eye_type.tres" id="3_fs7ai"]
+
+[resource]
+script = ExtResource("1_gef8a")
+name = ""
+type = ExtResource("3_fs7ai")
+texture = ExtResource("2_h01c3")
+offset = Vector2(0, 0)
+scale = Vector2(0, 0)

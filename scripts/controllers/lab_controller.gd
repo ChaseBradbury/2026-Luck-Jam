@@ -34,9 +34,7 @@ func _on_breed_pressed():
 	var child = $ChildCreature.get_creature()
 	for geneIndex in child.dna.size():
 		if randi() % 2:
-			print("if")
 			child.dna[geneIndex].x = parent1.dna[geneIndex].x
 		else:
-			print("else")
 			child.dna[geneIndex].x = parent2.dna[geneIndex].x
 	$ChildCreature.set_creature(child)

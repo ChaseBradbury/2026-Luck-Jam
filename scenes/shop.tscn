@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cjpnmbyje1um1"]
+[gd_scene load_steps=3 format=3 uid="uid://cjpnmbyje1um1"]
 
+[ext_resource type="Script" path="res://scripts/controllers/shop_controller.gd" id="1_gm3dq"]
 [ext_resource type="PackedScene" uid="uid://c4pk40266mxya" path="res://scenes/components/item.tscn" id="1_vwgtc"]
 
 [node name="Shop" type="Node2D"]
+script = ExtResource("1_gm3dq")
 
 [node name="Item" parent="." instance=ExtResource("1_vwgtc")]
 position = Vector2(295, 339)

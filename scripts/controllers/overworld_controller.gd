@@ -4,14 +4,25 @@ enum Room {
 	BARN, LAB, SHOP
 }
 
+var RNG: RandomNumberGenerator
+
+var runData: RunData
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	RNG = RandomNumberGenerator.new()
+	runData = RunData.new(RNG.get_seed())
 	close_room()
-
+	populate_rooms()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+func populate_rooms():
+	$Room/Barn.populate(runData)
+	$Room/Lab.populate(runData)
+	$Room/Shop.populate(runData)
 
 func open_room(room: Room):
 	$Room.visible = true

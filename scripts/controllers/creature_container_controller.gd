@@ -1,6 +1,11 @@
 extends Node2D
 
 @onready var frame: AnimatedSprite2D = $Frame
+@onready var creatureController: CreatureController = $Creature
+
+signal container_clicked(creature: Creature)
+
+var prev_creature: Creature
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,6 +26,12 @@ func _on_hitbox_mouse_exited():
 
 
 func _on_hitbox_input_event(viewport, event, shape_idx):
-	print(event)
 	if event is InputEventMouseButton and event.pressed:
-		print('Clicked')
+		if prev_creature == null:
+			var creature: Creature = creatureController.get_creature()
+			creatureController.set_creature(null)
+			container_clicked.emit(creature)
+			prev_creature = creature
+		else:
+			creatureController.set_creature(prev_creature)
+			prev_creature = null

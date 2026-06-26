@@ -1,0 +1,9 @@
+extends Node
+
+const START_MONEY = 50
+const START_ROUND = 1
+const START_DAY = 1
+const START_INVENTORY_SIZE = 3
+const START_STABLE_SIZE = 8
+
+var TRANSPARENT_ICON = load("res://textures/ui/transparent1x1.png")

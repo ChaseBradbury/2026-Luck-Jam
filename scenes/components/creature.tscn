@@ -1,42 +1,40 @@
-[gd_scene load_steps=10 format=3 uid="uid://8yj2j4cstdhp"]
+[gd_scene format=3 uid="uid://8yj2j4cstdhp"]
 
-[ext_resource type="Script" path="res://scripts/controllers/creature_controller.gd" id="1_c2qyl"]
+[ext_resource type="Script" uid="uid://ks8jnao5i2dy" path="res://scripts/controllers/creature_controller.gd" id="1_c2qyl"]
 [ext_resource type="Texture2D" uid="uid://d0q72hx4bpjen" path="res://textures/features/ears/ears3.png" id="2_qvgd7"]
 [ext_resource type="Texture2D" uid="uid://r6n27lb6rnw8" path="res://textures/features/eyes/eyes1.png" id="3_6ce6e"]
-[ext_resource type="Resource" uid="uid://dhtw7eouw0ly6" path="res://resources/creatures/default_creature.tres" id="3_68prw"]
 [ext_resource type="Texture2D" uid="uid://c4r3vkyjei3ng" path="res://textures/features/head/head1.png" id="3_py4lo"]
 [ext_resource type="Texture2D" uid="uid://bnto3ehqyqg4c" path="res://textures/features/eyebrows/eyebrows5.png" id="4_mdv5y"]
 [ext_resource type="Texture2D" uid="uid://c5owjs88nj5wu" path="res://textures/features/mouth/mouth2.png" id="6_04tr0"]
 [ext_resource type="Texture2D" uid="uid://88rfs4lpljy0" path="res://textures/features/nose/nose1.png" id="6_8d2er"]
 [ext_resource type="Texture2D" uid="uid://cvis87eswjo7n" path="res://textures/features/hair/hair3.png" id="8_0k6oy"]
 
-[node name="Creature" type="Node2D"]
+[node name="Creature" type="Node2D" unique_id=473097105]
 script = ExtResource("1_c2qyl")
-creature = ExtResource("3_68prw")
 
-[node name="Ears" type="Sprite2D" parent="."]
+[node name="Ears" type="Sprite2D" parent="." unique_id=1477568472]
 texture = ExtResource("2_qvgd7")
 
-[node name="Head" type="Sprite2D" parent="."]
+[node name="Head" type="Sprite2D" parent="." unique_id=416296598]
 texture = ExtResource("3_py4lo")
 
-[node name="Eyes" type="Sprite2D" parent="."]
+[node name="Eyes" type="Sprite2D" parent="." unique_id=1729755238]
 texture = ExtResource("3_6ce6e")
 
-[node name="Mouth" type="Sprite2D" parent="."]
+[node name="Mouth" type="Sprite2D" parent="." unique_id=1815406307]
 position = Vector2(0, 128)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("6_04tr0")
 
-[node name="Nose" type="Sprite2D" parent="."]
+[node name="Nose" type="Sprite2D" parent="." unique_id=1620952690]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("6_8d2er")
 
-[node name="Hair" type="Sprite2D" parent="."]
+[node name="Hair" type="Sprite2D" parent="." unique_id=570882278]
 position = Vector2(0, -1024)
 texture = ExtResource("8_0k6oy")
 
-[node name="Eyebrows" type="Sprite2D" parent="."]
+[node name="Eyebrows" type="Sprite2D" parent="." unique_id=1049556497]
 position = Vector2(0, -196)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("4_mdv5y")

@@ -10,5 +10,5 @@ func _ready():
 func _process(delta):
 	pass
 
-func populate(runData: RunData):
+func populate():
 	pass

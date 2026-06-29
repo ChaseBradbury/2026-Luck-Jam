@@ -4,14 +4,8 @@ enum Room {
 	BARN, LAB, SHOP
 }
 
-var RNG: RandomNumberGenerator
-
-var runData: RunData
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	RNG = RandomNumberGenerator.new()
-	runData = RunData.new(RNG.get_seed())
 	close_room()
 	populate_rooms()
 
@@ -20,9 +14,9 @@ func _process(delta):
 	pass
 
 func populate_rooms():
-	$Room/Barn.populate(runData)
-	$Room/Lab.populate(runData)
-	$Room/Shop.populate(runData)
+	$Room/Barn.populate()
+	$Room/Lab.populate()
+	$Room/Shop.populate()
 
 func open_room(room: Room):
 	$Room.visible = true
@@ -41,15 +35,15 @@ func close_room():
 	$Room/Shop.visible = false
 
 func _on_barn_btn_pressed():
-	open_room(Room.BARN)
+	SceneManager.change_scene(SceneManager.Scene.BARN)
 
 
 func _on_lab_btn_pressed():
-	open_room(Room.LAB)
+	SceneManager.change_scene(SceneManager.Scene.LAB)
 
 
 func _on_shop_btn_pressed():
-	open_room(Room.SHOP)
+	SceneManager.change_scene(SceneManager.Scene.SHOP)
 
 
 func _on_back_btn_pressed():

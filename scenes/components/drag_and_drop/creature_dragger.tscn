@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b8iuhbghthl1i"]
+
+[ext_resource type="Script" uid="uid://usdn7u10a1p" path="res://scripts/controllers/creature_dragger_controller.gd" id="1_b4jj0"]
+[ext_resource type="PackedScene" uid="uid://8yj2j4cstdhp" path="res://scenes/components/creature.tscn" id="2_stk7q"]
+
+[node name="CreatureDragger" type="Node2D" unique_id=408333273]
+script = ExtResource("1_b4jj0")
+
+[node name="Creature" parent="." unique_id=1483961363 instance=ExtResource("2_stk7q")]

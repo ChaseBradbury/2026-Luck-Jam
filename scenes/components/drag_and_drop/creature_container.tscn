@@ -1,27 +1,27 @@
-[gd_scene load_steps=11 format=3 uid="uid://dh2qjr0duce1h"]
+[gd_scene format=3 uid="uid://dh2qjr0duce1h"]
 
-[ext_resource type="Texture2D" uid="uid://sbm5uinnfxv6" path="res://textures/frame.png" id="1_2p80d"]
-[ext_resource type="Script" path="res://scripts/controllers/creature_container_controller.gd" id="1_tj0od"]
-[ext_resource type="PackedScene" uid="uid://8yj2j4cstdhp" path="res://scenes/components/creature.tscn" id="2_uu8u0"]
+[ext_resource type="Script" uid="uid://c24jxw0ijwh22" path="res://scripts/controllers/creature_container_controller.gd" id="1_lrtyj"]
+[ext_resource type="Texture2D" uid="uid://sbm5uinnfxv6" path="res://textures/frame.png" id="2_tswc8"]
+[ext_resource type="PackedScene" uid="uid://8yj2j4cstdhp" path="res://scenes/components/creature.tscn" id="3_hsb00"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xqlqh"]
-atlas = ExtResource("1_2p80d")
+atlas = ExtResource("2_tswc8")
 region = Rect2(0, 0, 100, 110)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d36uh"]
-atlas = ExtResource("1_2p80d")
+atlas = ExtResource("2_tswc8")
 region = Rect2(100, 0, 100, 110)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h2ddr"]
-atlas = ExtResource("1_2p80d")
+atlas = ExtResource("2_tswc8")
 region = Rect2(200, 0, 100, 110)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_orhnd"]
-atlas = ExtResource("1_2p80d")
+atlas = ExtResource("2_tswc8")
 region = Rect2(400, 0, 100, 110)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ednpa"]
-atlas = ExtResource("1_2p80d")
+atlas = ExtResource("2_tswc8")
 region = Rect2(300, 0, 100, 110)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0p817"]
@@ -30,7 +30,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xqlqh")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }, {
@@ -47,28 +47,27 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ednpa")
 }],
-"loop": true,
+"loop": 1,
 "name": &"hover",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0jf3"]
 
-[node name="CreatureContainer" type="Node2D"]
-script = ExtResource("1_tj0od")
+[node name="CreatureContainer" type="Node2D" unique_id=380578800]
+script = ExtResource("1_lrtyj")
 
-[node name="Frame" type="AnimatedSprite2D" parent="."]
+[node name="Frame" type="AnimatedSprite2D" parent="." unique_id=30585720]
 scale = Vector2(14.9666, 14.9666)
 sprite_frames = SubResource("SpriteFrames_0p817")
 
-[node name="Creature" parent="." instance=ExtResource("2_uu8u0")]
+[node name="Creature" parent="." unique_id=1968270838 instance=ExtResource("3_hsb00")]
 position = Vector2(0, 144)
-creature = null
 
-[node name="Hitbox" type="Area2D" parent="."]
+[node name="Hitbox" type="Area2D" parent="." unique_id=2007537625]
 scale = Vector2(0.862588, 0.862588)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=724584986]
 scale = Vector2(100, 100)
 shape = SubResource("RectangleShape2D_k0jf3")
 

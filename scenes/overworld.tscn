@@ -1,22 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://qc8om013uva6"]
+[gd_scene format=3 uid="uid://qc8om013uva6"]
 
 [ext_resource type="PackedScene" uid="uid://d10p1s7xxu6qf" path="res://scenes/lab.tscn" id="1_c2c7y"]
-[ext_resource type="Script" path="res://scripts/controllers/overworld_controller.gd" id="1_oek4o"]
+[ext_resource type="Script" uid="uid://3l16maply82w" path="res://scripts/controllers/overworld_controller.gd" id="1_oek4o"]
 [ext_resource type="Texture2D" uid="uid://dvbkwx6cck5vx" path="res://textures/ui/white1x1.png" id="2_dxuv8"]
 [ext_resource type="PackedScene" uid="uid://do5a5umx7nsht" path="res://scenes/barn.tscn" id="2_qc18f"]
 [ext_resource type="PackedScene" uid="uid://cjpnmbyje1um1" path="res://scenes/shop.tscn" id="4_76op1"]
 
-[node name="Overworld" type="Node2D"]
+[node name="Overworld" type="Node2D" unique_id=1983948428]
 script = ExtResource("1_oek4o")
 
-[node name="BarnBtn" type="Button" parent="."]
+[node name="BarnBtn" type="Button" parent="." unique_id=500300386]
 offset_left = 411.0
 offset_top = 84.0
 offset_right = 456.0
 offset_bottom = 115.0
 text = "Barn"
 
-[node name="LabBtn" type="Button" parent="."]
+[node name="LabBtn" type="Button" parent="." unique_id=1197623240]
 offset_left = 876.0
 offset_top = 261.0
 offset_right = 912.0
@@ -24,7 +24,7 @@ offset_bottom = 292.0
 text = "Lab
 "
 
-[node name="ShopBtn" type="Button" parent="."]
+[node name="ShopBtn" type="Button" parent="." unique_id=2075478546]
 offset_left = 418.0
 offset_top = 492.0
 offset_right = 465.0
@@ -32,27 +32,27 @@ offset_bottom = 523.0
 text = "Shop
 "
 
-[node name="Room" type="Node2D" parent="."]
+[node name="Room" type="Node2D" parent="." unique_id=504994347]
 visible = false
 
-[node name="White1x1" type="Sprite2D" parent="Room"]
+[node name="White1x1" type="Sprite2D" parent="Room" unique_id=39632689]
 modulate = Color(0.305882, 0.305882, 0.305882, 1)
 position = Vector2(634, 308)
 scale = Vector2(2000, 2000)
 texture = ExtResource("2_dxuv8")
 
-[node name="BackBtn" type="Button" parent="Room"]
+[node name="BackBtn" type="Button" parent="Room" unique_id=724196326]
 offset_left = 16.0
 offset_top = 16.0
 offset_right = 82.0
 offset_bottom = 81.0
 text = "X"
 
-[node name="Barn" parent="Room" instance=ExtResource("2_qc18f")]
+[node name="Barn" parent="Room" unique_id=7702727 instance=ExtResource("2_qc18f")]
 
-[node name="Lab" parent="Room" instance=ExtResource("1_c2c7y")]
+[node name="Lab" parent="Room" unique_id=2069331317 instance=ExtResource("1_c2c7y")]
 
-[node name="Shop" parent="Room" instance=ExtResource("4_76op1")]
+[node name="Shop" parent="Room" unique_id=1670636657 instance=ExtResource("4_76op1")]
 
 [connection signal="pressed" from="BarnBtn" to="." method="_on_barn_btn_pressed"]
 [connection signal="pressed" from="LabBtn" to="." method="_on_lab_btn_pressed"]

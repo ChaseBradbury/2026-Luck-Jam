@@ -22,6 +22,9 @@ config/icon="res://icon.svg"
 [autoload]
 
 Constants="*res://scripts/utils/constants.gd"
+RunManager="*uid://di11a3eyhta1q"
+SceneManager="*uid://brpejsh8cc74o"
+GenerationManager="*uid://bdyofc3scaus6"
 
 [input]
 

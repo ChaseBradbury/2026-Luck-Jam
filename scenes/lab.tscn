@@ -1,67 +1,67 @@
-[gd_scene load_steps=7 format=3 uid="uid://d10p1s7xxu6qf"]
+[gd_scene format=3 uid="uid://d10p1s7xxu6qf"]
 
-[ext_resource type="PackedScene" uid="uid://8yj2j4cstdhp" path="res://scenes/components/creature.tscn" id="1_04knn"]
-[ext_resource type="Script" path="res://scripts/controllers/lab_controller.gd" id="1_40r5m"]
-[ext_resource type="PackedScene" uid="uid://dh2qjr0duce1h" path="res://scenes/components/creature_container.tscn" id="2_aucay"]
-[ext_resource type="Script" path="res://scripts/controllers/stable_controller.gd" id="2_sh8xw"]
-[ext_resource type="Resource" uid="uid://c4b4ravrdk5p0" path="res://resources/creatures/default_creature2.tres" id="3_xyhiv"]
-[ext_resource type="Resource" uid="uid://y62ycwag74kj" path="res://resources/creatures/default_creature3.tres" id="4_033fj"]
+[ext_resource type="Script" uid="uid://dldt2u2f7ehb0" path="res://scripts/controllers/lab_controller.gd" id="1_40r5m"]
+[ext_resource type="PackedScene" uid="uid://dh2qjr0duce1h" path="res://scenes/components/drag_and_drop/creature_container.tscn" id="2_aucay"]
+[ext_resource type="Script" uid="uid://dhcywwmvomafd" path="res://scripts/controllers/stable_controller.gd" id="2_sh8xw"]
+[ext_resource type="PackedScene" uid="uid://b8iuhbghthl1i" path="res://scenes/components/drag_and_drop/creature_dragger.tscn" id="7_064jp"]
 
-[node name="Lab" type="Node2D"]
+[node name="Lab" type="Node2D" unique_id=1961994860]
 script = ExtResource("1_40r5m")
 
-[node name="Stable" type="Node2D" parent="."]
+[node name="Stable" type="Node2D" parent="." unique_id=1697634710]
 position = Vector2(200, 500)
 scale = Vector2(0.1, 0.1)
 script = ExtResource("2_sh8xw")
 
-[node name="CreatureContainer" parent="Stable" instance=ExtResource("2_aucay")]
-visible = false
-position = Vector2(633, 498)
-scale = Vector2(0.0992895, 0.0992895)
+[node name="Breeding" type="Node2D" parent="." unique_id=1799400267]
+position = Vector2(309, 66)
 
-[node name="Breeding" type="Node2D" parent="."]
-position = Vector2(636, 142)
-scale = Vector2(0.409099, 0.409099)
+[node name="ParentContainer1" parent="Breeding" unique_id=380578800 instance=ExtResource("2_aucay")]
+position = Vector2(116.00005, 114.000015)
+scale = Vector2(0.1, 0.1)
+id = 101
 
-[node name="ParentCreature" parent="Breeding" instance=ExtResource("1_04knn")]
-position = Vector2(188, 333)
-scale = Vector2(0.185, 0.185)
-
-[node name="Randomize" type="Button" parent="Breeding"]
-offset_left = 153.0
-offset_top = 486.0
-offset_right = 248.0
-offset_bottom = 517.0
+[node name="Randomize" type="Button" parent="Breeding" unique_id=301147365]
+offset_left = 77.0
+offset_top = 216.0
+offset_right = 172.0
+offset_bottom = 247.0
 text = "Randomize"
 metadata/_edit_use_anchors_ = true
 
-[node name="ParentCreature2" parent="Breeding" instance=ExtResource("1_04knn")]
-position = Vector2(479, 335)
-scale = Vector2(0.185, 0.185)
-creature = ExtResource("3_xyhiv")
+[node name="ParentContainer2" parent="Breeding" unique_id=596149524 instance=ExtResource("2_aucay")]
+position = Vector2(327, 113.000015)
+scale = Vector2(0.1, 0.1)
+id = 102
 
-[node name="Randomize2" type="Button" parent="Breeding"]
-offset_left = 433.0
-offset_top = 493.0
-offset_right = 528.0
-offset_bottom = 524.0
+[node name="Randomize2" type="Button" parent="Breeding" unique_id=552546397]
+offset_left = 277.0
+offset_top = 216.0
+offset_right = 372.0
+offset_bottom = 247.0
 text = "Randomize"
 metadata/_edit_use_anchors_ = true
 
-[node name="Breed" type="Button" parent="Breeding"]
-offset_left = 684.0
-offset_top = 285.0
-offset_right = 738.0
-offset_bottom = 316.0
+[node name="Breed" type="Button" parent="Breeding" unique_id=104384476]
+offset_left = 452.0
+offset_top = 102.0
+offset_right = 506.0
+offset_bottom = 133.0
 text = "Breed"
 metadata/_edit_use_anchors_ = true
 
-[node name="ChildCreature" parent="Breeding" instance=ExtResource("1_04knn")]
-position = Vector2(976, 339)
-scale = Vector2(0.185, 0.185)
-creature = ExtResource("4_033fj")
+[node name="ChildContainer" parent="Breeding" unique_id=926482278 instance=ExtResource("2_aucay")]
+position = Vector2(623.0001, 119.000015)
+scale = Vector2(0.1, 0.1)
+id = 103
 
+[node name="CreatureDragger" parent="." unique_id=408333273 instance=ExtResource("7_064jp")]
+position = Vector2(-275.99997, 121.99999)
+scale = Vector2(0.1, 0.1)
+
+[connection signal="container_clicked" from="Breeding/ParentContainer1" to="." method="_on_container_clicked"]
 [connection signal="pressed" from="Breeding/Randomize" to="." method="_on_randomize_pressed"]
+[connection signal="container_clicked" from="Breeding/ParentContainer2" to="." method="_on_container_clicked"]
 [connection signal="pressed" from="Breeding/Randomize2" to="." method="_on_randomize_2_pressed"]
 [connection signal="pressed" from="Breeding/Breed" to="." method="_on_breed_pressed"]
+[connection signal="container_clicked" from="Breeding/ChildContainer" to="." method="_on_container_clicked"]

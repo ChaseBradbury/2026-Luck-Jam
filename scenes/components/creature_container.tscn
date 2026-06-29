@@ -63,6 +63,7 @@ sprite_frames = SubResource("SpriteFrames_0p817")
 
 [node name="Creature" parent="." instance=ExtResource("2_uu8u0")]
 position = Vector2(0, 144)
+creature = null
 
 [node name="Hitbox" type="Area2D" parent="."]
 scale = Vector2(0.862588, 0.862588)

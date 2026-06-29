@@ -11,4 +11,3 @@ func _init(p_name: String = "", p_dna: Array[Vector2i] = []):
 	if dna.is_empty():
 		for i in dna_length:
 			dna.push_front(Vector2i(0,0))
-	

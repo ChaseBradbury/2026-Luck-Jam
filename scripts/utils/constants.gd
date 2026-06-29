@@ -7,3 +7,5 @@ const START_INVENTORY_SIZE = 3
 const START_STABLE_SIZE = 8
 
 var TRANSPARENT_ICON = load("res://textures/ui/transparent1x1.png")
+var FEATURES = load("res://resources/feature master lists/features.tres")
+var CREATURE_CONTAINER_SCENE = load("res://scenes/components/creature_container.tscn")

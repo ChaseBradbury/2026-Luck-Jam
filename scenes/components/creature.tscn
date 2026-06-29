@@ -1,7 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://8yj2j4cstdhp"]
+[gd_scene load_steps=10 format=3 uid="uid://8yj2j4cstdhp"]
 
 [ext_resource type="Script" path="res://scripts/controllers/creature_controller.gd" id="1_c2qyl"]
-[ext_resource type="Resource" uid="uid://biheeblxg3385" path="res://resources/feature master lists/features.tres" id="2_1awio"]
 [ext_resource type="Texture2D" uid="uid://d0q72hx4bpjen" path="res://textures/features/ears/ears3.png" id="2_qvgd7"]
 [ext_resource type="Texture2D" uid="uid://r6n27lb6rnw8" path="res://textures/features/eyes/eyes1.png" id="3_6ce6e"]
 [ext_resource type="Resource" uid="uid://dhtw7eouw0ly6" path="res://resources/creatures/default_creature.tres" id="3_68prw"]
@@ -13,7 +12,6 @@
 
 [node name="Creature" type="Node2D"]
 script = ExtResource("1_c2qyl")
-featureMasterList = ExtResource("2_1awio")
 creature = ExtResource("3_68prw")
 
 [node name="Ears" type="Sprite2D" parent="."]

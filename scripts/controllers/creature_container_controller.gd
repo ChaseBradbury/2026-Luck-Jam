@@ -1,4 +1,5 @@
 extends Node2D
+class_name CreatureContainerController
 
 @onready var frame: AnimatedSprite2D = $Frame
 @onready var creatureController: CreatureController = $Creature
@@ -9,7 +10,7 @@ var prev_creature: Creature
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	frame.play("default")
+	pass #frame.play("default")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

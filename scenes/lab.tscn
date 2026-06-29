@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://d10p1s7xxu6qf"]
+[gd_scene load_steps=7 format=3 uid="uid://d10p1s7xxu6qf"]
 
 [ext_resource type="PackedScene" uid="uid://8yj2j4cstdhp" path="res://scenes/components/creature.tscn" id="1_04knn"]
 [ext_resource type="Script" path="res://scripts/controllers/lab_controller.gd" id="1_40r5m"]
 [ext_resource type="PackedScene" uid="uid://dh2qjr0duce1h" path="res://scenes/components/creature_container.tscn" id="2_aucay"]
+[ext_resource type="Script" path="res://scripts/controllers/stable_controller.gd" id="2_sh8xw"]
 [ext_resource type="Resource" uid="uid://c4b4ravrdk5p0" path="res://resources/creatures/default_creature2.tres" id="3_xyhiv"]
 [ext_resource type="Resource" uid="uid://y62ycwag74kj" path="res://resources/creatures/default_creature3.tres" id="4_033fj"]
 
@@ -10,8 +11,12 @@
 script = ExtResource("1_40r5m")
 
 [node name="Stable" type="Node2D" parent="."]
+position = Vector2(200, 500)
+scale = Vector2(0.1, 0.1)
+script = ExtResource("2_sh8xw")
 
 [node name="CreatureContainer" parent="Stable" instance=ExtResource("2_aucay")]
+visible = false
 position = Vector2(633, 498)
 scale = Vector2(0.0992895, 0.0992895)
 
